@@ -1,6 +1,12 @@
 Simple, lightly and powerful Javascript Remote Procedure Calling (jsRPC) using jsonRPC over HTTP.
 
-This library is based on two method:
+This library is installed with:
+
+```js
+npm install @todojs/jsrpc --save
+```
+
+This library has two method:
 
 ## stubify (url, name[, methods])
 
@@ -15,6 +21,7 @@ Return a new Proxy object.
 Example:
 
 ```js
+const stubify = require('@todojs/jsrpc/stubify');
 const stub = stubify (
   "http://localhost:9000",
   'arithmetic',
@@ -37,5 +44,6 @@ result.
 Example:
 
 ```js
+const skeletonify = require ('@todojs/jsrpc/skeletonify');
 skeletonify ('arithmetic', Arithmetic);
 ```
