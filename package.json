@@ -8,5 +8,10 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/todojs/jsRPC"
   }
 }
