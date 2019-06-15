@@ -1,4 +1,4 @@
-const stubify  = require ('@todojs/jsrpc/stubify');
+const stubify  = require ('../stubify');
 module.exports = stubify (
   "http://localhost:9000",
   'arithmetic',

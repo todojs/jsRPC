@@ -1,3 +1,3 @@
 const Arithmetic  = require ('./arithmetic');
-const skeletonify = require ('@todojs/jsrpc/skeletonify');
+const skeletonify = require ('../skeletonify');
 module.exports    = skeletonify ('arithmetic', Arithmetic);
