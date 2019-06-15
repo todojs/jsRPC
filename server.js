@@ -6,6 +6,13 @@ app.on ('request', (request, response) => {
   const bodyChunks = [];
   request.on ('data', (chunk) => bodyChunks.push (chunk));
   request.on ('end', async () => {
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    if (request.method === 'OPTIONS') {
+      response.statusCode = 204;
+      response.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
+      response.setHeader('Access-Control-Allow-Headers', 'content-type');
+      return response.end();
+    }
     try {
       request.bodyRaw = Buffer.concat (bodyChunks);
       request.body    = request.bodyRaw.length ? JSON.parse (request.bodyRaw.toString ()) : null;
